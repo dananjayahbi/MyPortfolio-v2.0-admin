@@ -14,7 +14,7 @@ const LoginPage = () => {
       if (response.status === 200) {
         message.success("Login successful!");
         window.sessionStorage.setItem("LoggedIn", true);
-        window.sessionStorage.setItem("user", JSON.stringify(response.data));
+        window.sessionStorage.setItem("token", response.data.token);
         window.location.href = "/";
       } else {
         message.error("Login failed! Please check your credentials.");

@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import LoginPage from "./pages/LoginPage";
 import { ConfigProvider } from "antd";
-import Dashboard from "./pages/Dashboard";
+import Home from "./pages/Home";
 
 const App = () => {
   const isLogged = window.sessionStorage.getItem("LoggedIn");
@@ -20,7 +20,7 @@ const App = () => {
       <Routes>
         {isLogged ? (
           <>
-            <Route path="*" element={<Dashboard />} />
+            <Route path="*" element={<Home />} />
           </>
         ) : (
           <>
