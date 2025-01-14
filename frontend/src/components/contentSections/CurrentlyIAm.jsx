@@ -9,6 +9,7 @@ import {
   List,
   Space,
 } from "antd";
+import { CloudUploadOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
 
@@ -99,9 +100,7 @@ const CurrentlyIAm = () => {
   };
 
   return (
-    <Card style={{ maxWidth: "600px", margin: "auto", marginTop: "50px" }}>
-      <Title level={2}>Update Currently I Am Section</Title>
-
+    <Card style={{ marginTop: "-20px" }}>
       {/* Form for Adding New Text */}
       <Form layout="vertical">
         <Form.Item label="Add New Text">
@@ -111,7 +110,7 @@ const CurrentlyIAm = () => {
             placeholder="Enter new activity text"
           />
         </Form.Item>
-        <Button type="dashed" onClick={handleAddText}>
+        <Button color="primary" variant="outlined" onClick={handleAddText}>
           Add New Text
         </Button>
       </Form>
@@ -149,6 +148,7 @@ const CurrentlyIAm = () => {
         style={{ marginTop: "20px" }}
         onClick={handleUpdateCurrentlyIAm}
       >
+        <CloudUploadOutlined />
         Update Currently I Am
       </Button>
     </Card>

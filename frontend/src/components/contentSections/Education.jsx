@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form, Input, Button, message, Typography, Card, List } from "antd";
+import { CloudUploadOutlined } from "@ant-design/icons";
 
 const { Title } = Typography;
 
@@ -88,9 +89,7 @@ const Education = () => {
   };
 
   return (
-    <Card style={{ maxWidth: "600px", margin: "auto", marginTop: "50px" }}>
-      <Title level={2}>Update Education Section</Title>
-
+    <Card style={{ marginTop: "-20px" }}>
       {/* Form for Adding New Education Entry */}
       <Form layout="vertical">
         <Form.Item label="Add New Education">
@@ -100,7 +99,7 @@ const Education = () => {
             placeholder="Enter new education entry"
           />
         </Form.Item>
-        <Button type="dashed" onClick={handleAddEducation}>
+        <Button color="primary" variant="outlined" onClick={handleAddEducation}>
           Add Education
         </Button>
       </Form>
@@ -138,6 +137,7 @@ const Education = () => {
         style={{ marginTop: "20px" }}
         onClick={handleUpdateEducation}
       >
+        <CloudUploadOutlined />
         Update Education
       </Button>
     </Card>

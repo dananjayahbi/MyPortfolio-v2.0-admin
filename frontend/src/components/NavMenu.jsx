@@ -17,7 +17,7 @@ const NavMenu = () => {
         </Popover>
 
         {/* Projects */}
-        <Popover content="Projects" placement="right">
+        <Popover content="Update Projects" placement="right">
           <li style={styles.menuItem}>
             <Link to="/projects" style={styles.iconLink}>
               <Briefcase size={30} />
@@ -26,7 +26,7 @@ const NavMenu = () => {
         </Popover>
 
         {/* Content */}
-        <Popover content="Content" placement="right">
+        <Popover content="Update Content" placement="right">
           <li style={styles.menuItem}>
             <Link to="/content" style={styles.iconLink}>
               <FileText size={30} />
@@ -35,7 +35,7 @@ const NavMenu = () => {
         </Popover>
 
         {/* Profile */}
-        <Popover content="Profile" placement="right">
+        <Popover content="Update Profile" placement="right">
           <li style={styles.menuItem}>
             <Link to="/profile" style={styles.iconLink}>
               <User size={30} />
@@ -44,7 +44,7 @@ const NavMenu = () => {
         </Popover>
 
         {/* Settings */}
-        <Popover content="Settings" placement="right">
+        <Popover content="Update Settings" placement="right">
           <li style={styles.menuItem}>
             <Link to="/settings" style={styles.iconLink}>
               <Settings size={30} />

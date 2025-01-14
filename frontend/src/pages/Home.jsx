@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Route, Routes, useNavigate } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import NavMenu from "../components/NavMenu";
 import Header from "../components/Header";
 import Dashboard from "./Dashboard";
@@ -8,6 +8,10 @@ import Content from "./Content";
 import Profile from "./Profile";
 import Settings from "./Settings";
 import LowWidth from "./LowWidth";
+import ProjectByUploadMain from "./ProjectByUploadMain";
+import ProjectByURLMain from "./ProjectByURLMain";
+import ProjectByUploadExp from "./ProjectByUploadExp";
+import ProjectByURLExp from "./ProjectByURLExp";
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -39,6 +43,10 @@ const Home = () => {
         <Routes>
           <Route path="/" element={<Dashboard />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/projectByUpload/main" element={<ProjectByUploadMain />} />
+          <Route path="/projects/projectByURLs/main" element={<ProjectByURLMain />} />
+          <Route path="/projects/projectByUpload/exp" element={<ProjectByUploadExp />} />
+          <Route path="/projects/projectByURLs/exp" element={<ProjectByURLExp />} />
           <Route path="/content" element={<Content />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/settings" element={<Settings />} />
