@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Home, Briefcase, FileText, User, Settings } from "lucide-react";
+import { Home, Briefcase, FileText, User, FileUser } from "lucide-react";
 import { Popover } from "antd";
 
 const NavMenu = () => {
@@ -39,6 +39,15 @@ const NavMenu = () => {
           <li style={styles.menuItem}>
             <Link to="/profile" style={styles.iconLink}>
               <User size={30} />
+            </Link>
+          </li>
+        </Popover>
+
+        {/* Update CV */}
+        <Popover content="Update CV" placement="right">
+          <li style={styles.menuItem}>
+            <Link to="/update-cv" style={styles.iconLink}>
+              <FileUser size={30} />
             </Link>
           </li>
         </Popover>

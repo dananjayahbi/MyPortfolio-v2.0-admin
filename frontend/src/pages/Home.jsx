@@ -11,6 +11,7 @@ import ProjectByUploadMain from "./ProjectByUploadMain";
 import ProjectByURLMain from "./ProjectByURLMain";
 import ProjectByUploadExp from "./ProjectByUploadExp";
 import ProjectByURLExp from "./ProjectByURLExp";
+import UpdateCV from "./UpdateCV";
 
 const Home = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -48,6 +49,7 @@ const Home = () => {
           <Route path="/projects/projectByURLs/exp" element={<ProjectByURLExp />} />
           <Route path="/content" element={<Content />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/update-cv" element={<UpdateCV />} />
         </Routes>
       </div>
     </div>
