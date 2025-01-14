@@ -89,6 +89,7 @@ const UpdateProjectMainURLModal = ({ isVisible, onClose, projectData }) => {
   return (
     <Modal
       title="Update Project"
+      width={800}
       visible={isVisible}
       onCancel={onClose}
       footer={null}
