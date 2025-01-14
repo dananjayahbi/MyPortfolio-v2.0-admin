@@ -109,16 +109,24 @@ const ProjectByURLMain = () => {
       return;
     }
 
+    const project = projects.find((project) => project.id === id);
+    const hasLocalhostScreenshot = project.screenshots.some((url) =>
+      url.startsWith("http://localhost:3000")
+    );
+
+    const deleteUrl = hasLocalhostScreenshot
+      ? "http://localhost:3000/api/projects/main/delete"
+      : "http://localhost:3000/api/projects/main/deleteByUrl";
+
     try {
-      const response = await fetch(
-        `http://localhost:3000/api/projects/main/delete/${id}`,
-        {
-          method: "DELETE",
-          headers: {
-            Authorization: `Bearer ${token}`,
-          },
-        }
-      );
+      const response = await fetch(deleteUrl, {
+        method: "DELETE",
+        headers: {
+          Authorization: `Bearer ${token}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ id }),
+      });
 
       if (response.ok) {
         message.success("Project deleted successfully!");
