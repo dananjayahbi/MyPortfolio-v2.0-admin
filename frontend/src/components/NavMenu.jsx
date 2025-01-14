@@ -42,15 +42,6 @@ const NavMenu = () => {
             </Link>
           </li>
         </Popover>
-
-        {/* Settings */}
-        <Popover content="Update Settings" placement="right">
-          <li style={styles.menuItem}>
-            <Link to="/settings" style={styles.iconLink}>
-              <Settings size={30} />
-            </Link>
-          </li>
-        </Popover>
       </ul>
     </nav>
   );

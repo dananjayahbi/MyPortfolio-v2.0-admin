@@ -20,6 +20,7 @@ import {
   LoadingOutlined,
 } from "@ant-design/icons";
 import UpdateProjectExpURLModal from "../components/modals/UpdateProjectExpURLModal";
+import { useNavigate } from "react-router-dom";
 
 const { Title, Paragraph } = Typography;
 
@@ -33,6 +34,11 @@ const ProjectByURLExp = () => {
   const [isUpdateModalVisible, setIsUpdateModalVisible] = useState(false);
   const [screenshotUrls, setScreenshotUrls] = useState([]);
   const [newScreenshot, setNewScreenshot] = useState("");
+  const navigate = useNavigate();
+
+  const goBack = () => {
+    navigate(-1);
+  };
 
   // Fetch Projects (GET Request)
   useEffect(() => {
@@ -174,6 +180,9 @@ const ProjectByURLExp = () => {
 
       {/* Add New Project Button */}
       <div style={{ textAlign: "center", marginBottom: "20px" }}>
+        <Button type="primary" style={{ marginRight: "5px" }} onClick={goBack}>
+          Go Back
+        </Button>
         <Button
           type="primary"
           icon={<PlusOutlined />}

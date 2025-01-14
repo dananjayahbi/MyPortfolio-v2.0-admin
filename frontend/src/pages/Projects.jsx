@@ -49,7 +49,7 @@ const Projects = () => {
             <Title level={3}>By File Uploading</Title>
             <Paragraph>
               Upload screenshots of your project to create a new project or
-              update an existing one.
+              update an existing one. (To Be Developed ...)
             </Paragraph>
             {!showProjectOptions.upload ? (
               <Button

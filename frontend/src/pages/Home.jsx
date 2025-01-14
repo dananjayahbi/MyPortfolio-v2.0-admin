@@ -6,7 +6,6 @@ import Dashboard from "./Dashboard";
 import Projects from "./Projects";
 import Content from "./Content";
 import Profile from "./Profile";
-import Settings from "./Settings";
 import LowWidth from "./LowWidth";
 import ProjectByUploadMain from "./ProjectByUploadMain";
 import ProjectByURLMain from "./ProjectByURLMain";
@@ -49,7 +48,6 @@ const Home = () => {
           <Route path="/projects/projectByURLs/exp" element={<ProjectByURLExp />} />
           <Route path="/content" element={<Content />} />
           <Route path="/profile" element={<Profile />} />
-          <Route path="/settings" element={<Settings />} />
         </Routes>
       </div>
     </div>
